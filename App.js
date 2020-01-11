@@ -4,9 +4,9 @@ import { AppContainer } from './navigation/AppNavigator';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <>
       <AppContainer />
-    </View>
+    </>
   );
 }
 

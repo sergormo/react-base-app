@@ -72,3 +72,18 @@ export const AppContainer = createAppContainer(AppNavigator);
 ```
 
 
+### · Step linking between pages
+
+Problems with navigation: 
+
+· "The navigation prop was missing when calling this.navigator. In react-navigation 3 you must set up your app container directly. 
+
+More info: https://reactnavigation.org/docs/en/app-containers.html"
+
+I had to use React.Component correctly to build the screens components was not passing the prop correctly.
+
+Using React Native component [SafeAreaView](https://facebook.github.io/react-native/docs/safeareaview#__docusaurus) to avoid IOS filling the whole screen
+
+** Forgot to add the Button component from react-native library and I was going crazy. -.-
+
+Linking between Login and Home working!
