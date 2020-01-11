@@ -1,3 +1,8 @@
+# Select your Blockchain Dapp
+
+![alt text](https://github.com/sergormo/react-base-app/blob/master/assets/baby_small.png?raw=true) 
+
+
 ### · Step one, set initial project
 
 Using expo I setup a blank project.
@@ -101,6 +106,6 @@ Button component cannot have styles, I don't really know yet (Some Native compat
 
 Adding Image component to the item loop
 
-### · Step Seven - Let's add some rock to the app.
+### · Step Seven - Let's add some rock to the Dapp ;) Browser.
 
 Baby loves the app.
