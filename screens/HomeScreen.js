@@ -20,21 +20,20 @@ const openURL = (url) => {
 
 const Item = ({element}) => {
   return (
-    <View style={styles.item}>
-      <View style={styles.imageContainer}>
-        <Image
-          style={styles.imageSize}
-          source={{
-          uri: element.logo
-        }}/>
+    <TouchableOpacity onPress={() => openURL(element.link)}>
+      <View style={styles.item}>
+        <View style={styles.imageContainer}>
+          <Image
+            style={styles.imageSize}
+            source={{
+            uri: element.logo
+          }}/>
+        </View>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.textStyle}>{element.name}</Text>
+        </TouchableOpacity>
       </View>
-      <TouchableOpacity
-        title="Go to Home"
-        style={styles.button}
-        onPress={() => openURL(element.link)}>
-        <Text style={styles.textStyle}>{element.name}</Text>
-      </TouchableOpacity>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -49,7 +48,7 @@ export default class HomeScreen extends React.Component {
           style={styles.list}
           data={dapps}
           renderItem={({item}) => <Item element={item}/>}
-          keyExtractor={item => item.name}/> 
+          keyExtractor={item => item.name}/>
       </SafeAreaView>
     );
   }
