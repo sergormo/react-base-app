@@ -1,20 +1,23 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './screens/HomeScreen';
+import {StyleSheet, Text, View} from 'react-native';
 
-export default function App() {
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <HomeScreen />
+       <Text>Home Screen</Text>
     </View>
   );
 }
 
+HomeScreen.navigationOptions = {
+  header: null,
+};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+    marginBottom: 10
+  }
 });
