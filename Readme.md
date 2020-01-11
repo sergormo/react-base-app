@@ -71,8 +71,7 @@ const AppNavigator = createStackNavigator(
 export const AppContainer = createAppContainer(AppNavigator);
 ```
 
-
-### · Step linking between pages
+### · Step four linking between pages
 
 Problems with navigation: 
 
@@ -84,6 +83,15 @@ I had to use React.Component correctly to build the screens components was not p
 
 Using React Native component [SafeAreaView](https://facebook.github.io/react-native/docs/safeareaview#__docusaurus) to avoid IOS filling the whole screen
 
+```
+expo install react-native-safe-area-context
+```
+
 ** Forgot to add the Button component from react-native library and I was going crazy. -.-
 
 Linking between Login and Home working!
+
+### · Step five Home page listing
+
+Using FlatList component to render the data loop coming from assets/rrss.js
+
