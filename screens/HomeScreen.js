@@ -1,8 +1,22 @@
 import React from 'react';
-import {StyleSheet, Text, View, Button, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Image,
+  Linking
+} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {FlatList, TouchableOpacity} from 'react-native-gesture-handler';
 import {RRSS} from '../assets/rrss';
+import {dapps} from '../assets/dapps';
+
+const openURL = (url) => {
+  Linking
+    .openURL(url)
+    .catch((err) => console.error('An error occurred', err));
+}
 
 function Item({element}) {
   return (
@@ -17,7 +31,7 @@ function Item({element}) {
       <TouchableOpacity
         title="Go to Home"
         style={styles.button}
-        onPress={() => this.props.navigation.navigate('Home')}>
+        onPress={() => openURL(element.link)}>
         <Text style={styles.textStyle}>{element.name}</Text>
       </TouchableOpacity>
     </View>
@@ -29,19 +43,13 @@ export default class HomeScreen extends React.Component {
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
-          <Text>Choose your preferred Social Network</Text>
+          <Text>Choose your preferred DApp Blockchain</Text>
         </View>
         <FlatList
           style={styles.list}
-          data={RRSS}
+          data={dapps}
           renderItem={({item}) => <Item element={item}/>}
-          keyExtractor={item => item.name}/>
-        {/* <View>
-          <Text>Home Screen</Text>
-        </View>
-        <Button
-          title="Go to Login"
-          onPress={() => this.props.navigation.navigate('Login')}/> */}
+          keyExtractor={item => item.name}/> 
       </SafeAreaView>
     );
   }
