@@ -18,7 +18,7 @@ const openURL = (url) => {
     .catch((err) => console.error('An error occurred', err));
 }
 
-function Item({element}) {
+const Item = ({element}) => {
   return (
     <View style={styles.item}>
       <View style={styles.imageContainer}>
