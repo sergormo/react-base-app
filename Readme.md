@@ -95,3 +95,9 @@ Linking between Login and Home working!
 
 Using FlatList component to render the data loop coming from assets/rrss.js
 
+### · Step six let's show the images and get some style.
+
+Button component cannot have styles, I don't really know yet (Some Native compatibility).
+Using "TouchableOpacity" to replace buttons
+
+Adding Image component
