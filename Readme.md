@@ -97,7 +97,10 @@ Using FlatList component to render the data loop coming from assets/rrss.js
 
 ### · Step six let's show the images and get some style.
 
-Button component cannot have styles, I don't really know yet (Some Native compatibility).
-Using "TouchableOpacity" to replace buttons
+Button component cannot have styles, I don't really know yet (Some Native compatibility). Using "TouchableOpacity" (People recomend it) to replace buttons
 
-Adding Image component
+Adding Image component to the item loop
+
+### · Step Seven - Let's add some rock to the app.
+
+Baby loves the app.

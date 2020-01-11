@@ -18,7 +18,7 @@ function Item({element}) {
         title="Go to Home"
         style={styles.button}
         onPress={() => this.props.navigation.navigate('Home')}>
-        <Text style={styles.title}>{element.name}</Text>
+        <Text style={styles.textStyle}>{element.name}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -36,12 +36,12 @@ export default class HomeScreen extends React.Component {
           data={RRSS}
           renderItem={({item}) => <Item element={item}/>}
           keyExtractor={item => item.name}/>
-        <View>
+        {/* <View>
           <Text>Home Screen</Text>
         </View>
         <Button
           title="Go to Login"
-          onPress={() => this.props.navigation.navigate('Login')}/>
+          onPress={() => this.props.navigation.navigate('Login')}/> */}
       </SafeAreaView>
     );
   }
@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    marginBottom: 20
+    marginBottom: 20,
+    backgroundColor: '#ADFF00'
   },
   header: {
     marginVertical: 20
@@ -93,5 +94,11 @@ const styles = StyleSheet.create({
   },
   button: {
     marginHorizontal: 10
+  },
+  textStyle: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    color: 'lightgrey',
+    marginRight: 10
   }
 });
